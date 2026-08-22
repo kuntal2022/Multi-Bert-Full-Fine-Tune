@@ -8,7 +8,7 @@ uv pip install -r requirements.txt
 # Register as a Jupyter kernel (for VS Code notebooks)
 uv pip install ipykernel
 python -m ipykernel install --user --name=ktl_env --display-name "Python (ktl_env)"
-```
+----
 
 ## Results (3 epochs, test set = 1000 samples)
 
