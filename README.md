@@ -2,19 +2,6 @@
 
 Fine-tuned text classification model to detect emotion/mood from tweets. Classifies text into 6 emotion categories: **sadness, fear, joy, anger, love, surprise**.
 
-## Setup
-
-Environment: RunPod GPU pod, connected via VS Code Remote-SSH, managed with `uv`.
-
-```bash
-# Install uv
-curl -LsSf https://astral.sh/uv/install.sh | sh
-source $HOME/.local/bin/env
-
-# Create and activate virtual environment
-uv venv ktl_env
-source ktl_env/bin/activate
-
 # Install dependencies
 uv pip install -r requirements.txt
 
