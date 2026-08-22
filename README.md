@@ -41,6 +41,9 @@ python -m ipykernel install --user --name=ktl_env --display-name "Python (ktl_en
 
 ## Confusion Matrix
 
+<img width="637" height="540" alt="image" src="https://github.com/user-attachments/assets/bb5aadb9-df6b-4915-ad34-36e6c194e2fb" />
+
+
 Key misclassification patterns:
 - **Joy → Fear**: 20 samples — the largest single confusion in the matrix
 - **Love → Surprise**: 12 samples, **Love → Fear**: 6 samples
