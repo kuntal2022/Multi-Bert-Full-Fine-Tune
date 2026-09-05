@@ -1,12 +1,12 @@
-# Fine-Tuning BERT and Its Distilled Variants for Mood Classification
+# Fine-Tuning BERT and Its Distilled Variants for Fake News Detection
 
-A comparative fine-tuning project — training and evaluating four BERT-family models (`bert-base-uncased`, `distilbert-base-uncased`, `google/mobilebert-uncased`, and a tiny BERT variant) on the same classification task, side-by-side, using a shared training pipeline built with HuggingFace `transformers`.
+A comparative fine-tuning project — training and evaluating four BERT-family models (`bert-base-uncased`, `distilbert-base-uncased`, `google/mobilebert-uncased`, and a tiny BERT variant) on a **real vs. fake news classification task**, side-by-side, using a shared training pipeline built with HuggingFace `transformers`.
 
 > **Note on dataset size:** This project uses a small subset (100 rows per split) of the full dataset. The goal here was to build and validate the complete multi-model training pipeline — data loading, tokenization across different tokenizers, class-imbalance handling, custom Trainer logic, early stopping, and evaluation — rather than to produce production-grade accuracy numbers. The same pipeline scales directly to the full dataset by removing the row-limit at the loading step.
 
 ## What This Project Does
 
-1. Loads a labeled text classification dataset (real/fake news style binary labels).
+1. Loads a labeled news dataset (`title`, `text`, `label` columns) with binary real/fake labels.
 2. Tokenizes the same data separately for each of the four models (since each has its own tokenizer/vocabulary).
 3. Loads each model with `AutoModelForSequenceClassification`, attaching a fresh classification head.
 4. Trains all four models using a shared, reusable `CreateTrainer()` function, with:
